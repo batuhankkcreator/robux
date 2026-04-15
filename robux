@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Robux Generator 2026 - 1M Robux Bedava!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #00b4ff, #7b00ff);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px #ff00ff;
+        }
+        .robux-logo {
+            font-size: 5em;
+            margin: 20px 0;
+        }
+        input {
+            padding: 15px;
+            font-size: 1.2em;
+            width: 80%;
+            border: none;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        button {
+            background: #00ff00;
+            color: black;
+            padding: 15px 40px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #00cc00;
+            transform: scale(1.05);
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 1.4em;
+            min-height: 50px;
+        }
+        .virus {
+            color: #ff0000;
+            font-size: 2em;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="robux-logo">💎 ROBUX 💎</div>
+        <h1>Ücretsiz Robux Generator</h1>
+        <p>2026'nın en yeni yöntemi! Max 1.000.000 Robux bedava al!</p>
+        
+        <input type="text" id="username" placeholder="Roblox kullanıcı adını gir (örnek: BatuhanFrog)" required>
+        
+        <button onclick="generateRobux()">ROBUX AL - BEDAVA!</button>
+        
+        <div id="status"></div>
+    </div>
+
+    <script>
+        function generateRobux() {
+            const username = document.getElementById('username').value.trim();
+            const status = document.getElementById('status');
+            
+            if (!username) {
+                status.innerHTML = '<span style="color: yellow;">Lütfen kullanıcı adını gir frog!</span>';
+                return;
+            }
+            
+            status.innerHTML = `Merhaba <b>${username}</b>! Robux yükleniyor... <br>🔄 0 / 1.000.000`;
+            
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 80000) + 50000;
+                if (progress > 1000000) progress = 1000000;
+                
+                status.innerHTML = `Merhaba <b>${username}</b>! Robux yükleniyor... <br>🔄 ${progress.toLocaleString()} / 1.000.000`;
+                
+                if (progress >= 1000000) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        status.innerHTML = `
+                            <span class="virus">⚠️ TEHLİKE! ⚠️</span><br><br>
+                            Bedava Robux almaya çalıştığın için cihazına <b>VİRÜS BULAŞTI!</b><br>
+                            😂😂 ŞAKA ŞAKA frog!<br>
+                            Arkadaşın seni trolledi, gerçek Robux burdan gelmez!<br>
+                            Bir daha inanma böyle şeylere kral 😎
+                        `;
+                    }, 800);
+                }
+            }, 400);
+        }
+    </script>
+</body>
+</html>
